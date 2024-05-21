@@ -7,10 +7,6 @@ model = YOLO("yolov8n.pt")
 
 cap = cv2.VideoCapture(0)
 
-if not cap.isOpened():
-    raise IOError("Cannot open webcam")
-
-
 col1, col2 = st.columns(2)
 
 if col1.button("Iniciar"):
