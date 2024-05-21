@@ -16,7 +16,6 @@ if col1.button("Iniciar"):
     with st.empty():
         while True:
             ret, frame = cap.read()
-            frame = cv2.resize(frame, None, fx=0.5, fy=0.5, interpolation=cv2.INTER_AREA)
             frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
 
             results = model(frame)
